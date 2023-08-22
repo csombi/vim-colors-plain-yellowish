@@ -35,12 +35,13 @@ let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
 let s:light_blue      = { "gui": "#B6D6FD", "cterm": "153" }
 let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
 let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
+let s:dark_green      = { "gui": "#87A96B", "cterm": "28"  }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
 let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:dark_orange	  = { "gui": "#CC7722", "cterm": "94"  }
 
 if &background == "dark"
   let s:bg               = s:black
@@ -56,8 +57,8 @@ if &background == "dark"
   let s:yellow           = s:light_yellow
   let s:visual           = s:lighter_black
   let s:cursor_line      = s:subtle_black
-  let s:constant         = s:yellow
-  let s:comment          = s:light_gray
+  let s:constant         = s:dark_green
+  let s:comment          = s:dark_orange
   let s:selection        = s:dark_yellow
   let s:selection_fg     = s:black
   let s:ok               = s:light_green
@@ -107,6 +108,7 @@ unlet s:dark_purple
 unlet s:light_purple
 unlet s:light_yellow
 unlet s:dark_yellow
+unlet s:dark_orange
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -168,7 +170,7 @@ hi! link Directory        Constant
 hi! link Title            Constant
 
 " __Statement__
-call s:h("Statement",     {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+call s:h("Statement",     {"fg": s:yellow, "gui": "bold"})
 hi! link Include          Statement
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
