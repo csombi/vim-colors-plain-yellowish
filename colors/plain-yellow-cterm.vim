@@ -18,7 +18,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='plain'
+let g:colors_name='plain-yellow'
 
 let s:none              = {"cterm": "NONE"}
 
