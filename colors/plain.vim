@@ -18,7 +18,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='plain'
+let g:colors_name='plain-yellow'
 
 let s:black           = { "gui": "#222222", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -56,7 +56,7 @@ if &background == "dark"
   let s:yellow           = s:light_yellow
   let s:visual           = s:lighter_black
   let s:cursor_line      = s:subtle_black
-  let s:constant         = s:light_yellow
+  let s:constant         = s:yellow
   let s:comment          = s:light_gray
   let s:selection        = s:dark_yellow
   let s:selection_fg     = s:black
@@ -168,7 +168,7 @@ hi! link Directory        Constant
 hi! link Title            Constant
 
 " __Statement__
-call s:h("Statement",     {"fg": s:norm, "gui": "bold"})
+call s:h("Statement",     {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 hi! link Include          Statement
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
